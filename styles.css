@@ -1,0 +1,127 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  background: #f0f4f8;
+  color: #102a43;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background: linear-gradient(180deg, #e8f1fb 0%, #f8fafc 100%);
+}
+
+.app-shell {
+  width: min(640px, 100%);
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(16, 42, 67, 0.12);
+  padding: 32px;
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-size: clamp(2rem, 2.5vw, 2.5rem);
+  letter-spacing: -0.03em;
+}
+
+.todo-input {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+#todo-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  font-size: 1rem;
+}
+
+#add-button {
+  background: #0f6fff;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 14px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#add-button:hover {
+  background: #0d5cd7;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.todo-item.completed {
+  background: #ebf8ff;
+  color: #475569;
+  text-decoration: line-through;
+}
+
+.todo-text {
+  flex: 1;
+  margin: 0;
+  padding-right: 12px;
+  word-break: break-word;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.todo-actions button {
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+.todo-actions button:hover {
+  background: #e2e8f0;
+}
+
+.complete-button {
+  color: #0f6fff;
+}
+
+.delete-button {
+  color: #d6336c;
+}
+
+.empty-state {
+  color: #627d98;
+  text-align: center;
+  padding: 24px 0;
+}
